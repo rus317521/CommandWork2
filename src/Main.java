@@ -7,10 +7,6 @@ public class Main {
         int[] prices = {40, 80, 70, 110, 300};
         String[] products = {"Хлеб", "Молоко", "Сахар", "Яблоки", "Чай"};
         int[] shopCart = new int[prices.length]; // записали в какой ячейке сколько штук лежит
-
-        int productNumber = 0; // номер выбранного продукта
-        int productCount = 0; // количество продукта
-        int currentPrices = prices[productNumber]; // поиск цены продукта
         int sumProducts = 0; // итоговая сумма покупок
 
         while (true) {
@@ -22,6 +18,10 @@ public class Main {
             if ("end".equals(input)) {
                 break;
             }
+
+            int productNumber; // номер выбранного продукта
+            int productCount; // количество продукта
+
             String[] count = input.split(" ");
             if (count.length != 2) {
                 System.out.println("Введено не 2 значения!");
@@ -43,6 +43,7 @@ public class Main {
                 System.out.println(" ");
                 continue;
             }
+
             shopCart[productNumber] += productCount; // посчитали итоговое количество штук конкретного продукта
             int sum = productCount * prices[productNumber]; // посчитали цену конкретной позиции
             sumProducts += sum; // посчитали общую сумму покупок
