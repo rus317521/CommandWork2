@@ -6,7 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int[] prices = {40, 80, 70, 110, 300};
         String[] products = {"Хлеб", "Молоко", "Сахар", "Яблоки", "Чай"};
-        int[] shopCart = new int[5]; // записали в какой ячейке сколько штук лежит
+        int[] shopCart = new int[prices.length]; // записали в какой ячейке сколько штук лежит
 
         int productNumber = 0; // номер выбранного продукта
         int productCount = 0; // количество продукта
